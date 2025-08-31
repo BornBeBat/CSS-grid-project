@@ -86,6 +86,35 @@
   font-family: var(--common-font);
 }
 
+.longread {
+  display: grid;
+  gap: 96px;
+}
+
+@media (min-width: 1440px) {
+  .longread {
+    grid-template-areas: 
+      "b b s"
+      "b b s"
+      "b b v"
+      "b b .";
+    gap: 60px 24px;
+}
+
+  .blog{
+    grid-area: b;
+}
+
+  .socials {
+    grid-area: s;
+}
+
+  .video {
+    grid-area: v;
+}
+}
+
+
 .blog{
   display: grid;
   gap: 48px;
@@ -187,9 +216,13 @@
   background-color: var(--lilac);
 }
 
+
+
 .video-title {
   color: var(--grey, #2c2c2c);
   font-family: var(--common-font);
+  margin-bottom: 24px;
+
 }
 
 .footer {
