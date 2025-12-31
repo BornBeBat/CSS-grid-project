@@ -1,3 +1,7 @@
+/* =====================================================
+============= Связанные списки
+========================================================*/
+
 // class Node {
 //     constructor(data) {
 //         this.data = data;
@@ -157,7 +161,9 @@
 
 // console.log(factorial()); // виведе 120
 
-
+/* =====================================================
+============= Рекурсия
+========================================================*/
 // function factorial(n) {
 //   console.log("Виклик функції factorial з n = ", n);
 //   if (n === 1) {
@@ -187,6 +193,13 @@
 
 // // Тестуємо функцію
 // console.log(fibonacciMemo(10));  // Виведе: 55
+
+/* =====================================================
+============= Алгоритмы сортировки
+========================================================*/
+
+// сортировка пузыриком
+
 // function bubbleSort(arr) {
 //     const n = arr.length;
 //     for (let i = 0; i < n - 1; i++) {
@@ -206,6 +219,8 @@
 // console.log(numbers);
 
 
+// Сртировка вставками
+
 // function insertionSort(arr) {
 //     const n = arr.length;
 //     for (let i = 1; i < n; i++) {
@@ -224,6 +239,7 @@
 // insertionSort(numbers);
 // console.log(numbers);
 
+// Сортировка выбором
 
 // function selectionSort(arr) {
 //     const n = arr.length;
@@ -242,6 +258,7 @@
 // const numbers = [5, 3, 8, 4, 2];
 // console.log(selectionSort(numbers));
 
+// Быстрая сортировка
 
 // function quicksort(arr) {
 //     if (arr.length <= 1) {
@@ -260,6 +277,11 @@
 // const result = quicksort([7, 12, 3, 5, 8, 11, 20, 1, 6, 14]);
 // console.log(result); // Виведе: [2, 3, 4, 5, 8]
 
+/* =====================================================
+============= Алгоритмы поиска
+========================================================*/
+// Линейный поиск
+
 // function linearSearch(arr, x) {
 //     for (let i = 0; i < arr.length; i++) {
 //         if (arr[i] === x) {
@@ -277,6 +299,7 @@
 
 // console.log(`Елемент ${elementToFind} знаходиться на ${result}`);
 
+// Бинарный поиск
 
 // function binarySearch(arr, x) {
 //     let low = 0;
@@ -308,26 +331,69 @@
 //     console.log("Element is not present in array");
 // }
 
+// Интреполяционный поиск
 
-function interpolationSearch(arr, x) {
-    let low = 0;
-    let high = arr.length - 1;
+// function interpolationSearch(arr, x) {
+//     let low = 0;
+//     let high = arr.length - 1;
 
-    while (low <= high && x >= arr[low] && x <= arr[high]) {
-        const index = low + Math.floor(((high - low) / (arr[high] - arr[low])) * (x - arr[low]));
-        if (arr[index] === x) {
-            return index;
-        }
-        if (arr[index] < x) {
-            low = index + 1;
-        } else {
-            high = index - 1;
-        }
-    }
+//     while (low <= high && x >= arr[low] && x <= arr[high]) {
+//         const index = low + Math.floor(((high - low) / (arr[high] - arr[low])) * (x - arr[low]));
+//         if (arr[index] === x) {
+//             return index;
+//         }
+//         if (arr[index] < x) {
+//             low = index + 1;
+//         } else {
+//             high = index - 1;
+//         }
+//     }
 
-    return -1;
-}
+//     return -1;
+// }
 
-const arr = [1, 3, 5, 7, 9, 11, 14, 16, 18, 20, 22, 25, 28, 30];
-const index = interpolationSearch(arr, 25);
-console.log(arr[index]); // 25
+// const arr = [1, 3, 5, 7, 9, 11, 14, 16, 18, 20, 22, 25, 28, 30];
+// const index = interpolationSearch(arr, 25);
+// console.log(arr[index]); // 25
+
+
+/* =====================================================
+============= хеш таблица 
+========================================================*/
+// const hashTable = {};
+
+// hashTable['John Doe'] = '+1234567890';
+// hashTable['Jane Doe'] = '+0987654321';
+// hashTable['Jacob Mercer'] = '+0487154395';
+
+// for (const key in hashTable) {
+// 	// використовуємо hasOwnProperty(), щоб перебирати лише власні властивості
+//   if (hashTable.hasOwnProperty(key)) {
+// 		console.log(`key is: ${key}, value is: ${hashTable[key]}`);
+//   }
+// }
+
+/* =====================================================
+============= хеш таблица через Map
+========================================================*/
+
+// const hashTable = new Map();
+
+// hashTable.set('John Doe', '+1234567890');
+// hashTable.set('Jane Doe', '+0987654321');
+// hashTable.set('Jacob Mercer', '+0487154395');
+
+// console.log(hashTable.get('Jacob Mercer'));
+
+// hashTable.set('John Doe', '+2345678901');
+// console.log(hashTable.get('John Doe'));
+
+// console.log(hashTable.size);
+
+// hashTable.delete('Jane Doe');
+
+// console.log(hashTable.size);
+
+// for (const [key, value] of hashTable) {
+//   console.log(`${key} = ${value}`);
+// }
